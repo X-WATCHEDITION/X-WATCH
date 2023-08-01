@@ -1,0 +1,49 @@
+.header img {
+  max-width: 400px; /* Adjust the value as per your desired size */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #000; /* Changer le fond en noir */
+  color: #fff; /* Changer la couleur du texte en blanc pour une meilleure lisibilité sur fond noir */
+  margin: 0;
+}
+
+.container {
+  border: 1px solid #fff; /* Changer la couleur de la bordure en blanc pour une meilleure lisibilité sur fond noir */
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(255,255,255,0.1);
+  background-color: #222; /* Changer la couleur de fond du cadre en gris foncé pour contraster avec le fond noir */
+  border-radius: 20px; /* Ajouter des bords arrondis */
+  max-width: 500px;
+  margin: auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+}
+
+input, textarea {
+  margin-top: 5px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #333; /* Changer la couleur de fond des champs du formulaire en gris plus foncé */
+  color: #fff; /* Changer la couleur du texte dans les champs du formulaire en blanc pour une meilleure lisibilité */
+}
+
+input[type="submit"] {
+  margin-top: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+}

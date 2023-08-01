@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Giveaway Result</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    /* Center the image horizontally */
+    .header {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="image.png" alt="WATCHLOGO" />
+    </div>
+    <h1>Giveaway Result</h1>
+    <h2 id="status">Congratulations! You Won X-WATCH WHITELIST!</h2>
+    <form id="contact-form" action="https://getform.io/f/fb45ee23-5aad-4902-9c75-03688d32c088" method="POST">
+      <h2>Contact Us</h2>
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label>
+        <input type="checkbox" id="agree" required> I agree with the following statement:
+        "We need your email and name in order to contact you regarding your whitelist access. Rest assured, we will not use your email for any commercial purposes other than providing information about your whitelist access."
+      </label>
+      <input type="submit" value="Submit" id="submit-btn" disabled>
+    </form>
+  </div>
+  <script>
+    // Function to check if all required fields are filled before enabling the submit button
+    function checkFormValidity() {
+      const nameInput = document.getElementById('name');
+      const emailInput = document.getElementById('email');
+      const agreeCheckbox = document.getElementById('agree');
+      const submitBtn = document.getElementById('submit-btn');
+
+      submitBtn.disabled = !(nameInput.checkValidity() && emailInput.checkValidity() && agreeCheckbox.checked);
+    }
+
+    // Add event listeners to check form validity whenever there's a change in the form fields
+    document.getElementById('name').addEventListener('input', checkFormValidity);
+    document.getElementById('email').addEventListener('input', checkFormValidity);
+    document.getElementById('agree').addEventListener('change', checkFormValidity);
+  </script>
+</body>
+</html>
